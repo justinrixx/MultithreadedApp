@@ -1,0 +1,84 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Threads Demo"
+        android:id="@+id/textView" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        >
+
+        <ListView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+
+            android:id="@+id/odds">
+        </ListView>
+
+        <ListView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+
+            android:id="@+id/evens">
+        </ListView>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:visibility="invisible"
+        android:id="@+id/progressBar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="?android:buttonBarStyle">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Create Files"
+            android:onClick="createFiles"
+            style="?android:buttonBarStyle"
+            android:id="@+id/btnCreate"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Read Files"
+            style="?android:buttonBarStyle"
+            android:onClick="readFiles"
+            android:id="@+id/btnRead"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Clear Lists"
+            android:onClick="clear"
+            style="?android:buttonBarStyle"
+            android:id="@+id/bntClear"/>
+
+        </LinearLayout>
+
+</LinearLayout>
